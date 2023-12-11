@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+:root {
+    --my-padding: 0.4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*desktop/laptop*/
+.container {
+    font-family: 'Nova Square', sans-serif;
+    font-size: 2rem;
+    color: white;
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2.5fr 1fr 1fr 0.7fr;
+    grid-template-areas: 
+    "header menu menu"
+    "hero hero hero"
+    "main main image"
+    "main main extra"
+    "banner banner banner";
+}
+
+header {
+    background-color: black;
+    padding: var(--my-padding);
+    grid-area: header;
+    display: grid;
+    align-items: center;
+}
+
+menu {
+    background-color: red;
+    padding: var(--my-padding);
+    grid-area: menu;
+    display: grid;
+    align-items: center;
+}
+
+.hero {
+    background-color: lightslategray;
+    padding: var(--my-padding);
+    grid-area: hero;
+    display: grid;
+    align-items: center;
+}
+
+main {
+    background-color: darkred;
+    padding: var(--my-padding);
+    grid-area: main;
+    display: grid;
+    align-items: center;
+}
+
+.image {
+    background-color: grey;
+    padding: var(--my-padding);
+    grid-area: image;
+    display: grid;
+    align-items: center;
+}
+
+.extra {
+    background-color: green;
+    padding: var(--my-padding);
+    grid-area: extra;
+    display: grid;
+    align-items: center;
+}
+
+.banner {
+    background-color: darkorange;
+    padding: var(--my-padding);
+    grid-area: banner;
+    display: grid;
+    align-items: center;
+}
+
+/*tablet*/
+@media (max-width: 1024px) {
+
+    .container {
+        grid-template-columns: 0.6fr 1fr 0.7fr;
+        grid-template-rows: 0.5fr 2fr 2.5fr 1fr 0.7fr;
+        grid-template-areas: 
+        "header header header"
+        "hero hero hero"
+        "menu main main"
+        "menu banner banner"
+        "menu extra image";
+    }
+}
+
+/*smartphone*/
+@media (max-width: 480px) {
+    
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.6fr 0.8fr 1.5fr 2fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header"
+        "menu"
+        "hero"
+        "main"
+        "banner"
+        "extra"
+        "image";
+    }
+}
